@@ -4,12 +4,20 @@ import { persist } from "zustand/middleware";
 import type { GameId } from "@/src/domain/ports/game.port";
 import type { StarsByGame } from "@/src/domain/services/achievements";
 
+export interface LastPlayed {
+  gameId: GameId;
+  level: number;
+}
+
 interface ProgressState {
   starsByGame: StarsByGame;
+  /** ด่านล่าสุดที่เข้าเล่น (ใช้บน dashboard "เล่นต่อ") */
+  lastPlayed?: LastPlayed;
   /** ดาวของด่าน (0 = ยังไม่ผ่าน) */
   getStars: (gameId: GameId, level: number) => number;
   /** บันทึกแบบ best-of — คืน true ถ้าเป็นสถิติใหม่ (ดีขึ้น) */
   saveStars: (gameId: GameId, level: number, stars: number) => boolean;
+  setLastPlayed: (gameId: GameId, level: number) => void;
   resetProgress: () => void;
   /** merge จาก server (best-of) เผื่อ backend ภายหลัง */
   mergeFromServer: (incoming: StarsByGame) => void;
@@ -34,7 +42,9 @@ export const useProgressStore = create<ProgressState>()(
         return true;
       },
 
-      resetProgress: () => set({ starsByGame: {} }),
+      setLastPlayed: (gameId, level) => set({ lastPlayed: { gameId, level } }),
+
+      resetProgress: () => set({ starsByGame: {}, lastPlayed: undefined }),
 
       mergeFromServer: (incoming) =>
         set((s) => {

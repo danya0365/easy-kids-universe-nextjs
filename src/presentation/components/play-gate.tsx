@@ -55,6 +55,7 @@ export function PlayGate({
   const spend = useEnergyStore((s) => s.spend);
   const energy = useEnergyStore((s) => s.energy);
   const starsByGame = useProgressStore((s) => s.starsByGame);
+  const setLastPlayed = useProgressStore((s) => s.setLastPlayed);
   // entered = เข้าเล่นแล้ว (หักพลังงานแล้ว) — คงการ render เกมไว้แม้พลังงานลดหลังหัก
   const [entered, setEntered] = useState(false);
 
@@ -75,9 +76,10 @@ export function PlayGate({
     const id = setTimeout(() => {
       setEntered(true);
       if (cost > 0) spend(cost);
+      setLastPlayed(gameId, level);
     }, 0);
     return () => clearTimeout(id);
-  }, [allow, entered, cost, spend]);
+  }, [allow, entered, cost, spend, setLastPlayed, gameId, level]);
 
   if (!mounted) {
     return (
