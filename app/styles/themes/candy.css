@@ -1,0 +1,89 @@
+/* ============================================
+   Template: candy 🍬 (ปลดด้วยเพชร 80 💎)
+   พาสเทลชมพูหวานๆ
+   ============================================ */
+
+[data-theme="candy"] {
+  /* Brand — candy pink */
+  --brand-50: #fff1f7;
+  --brand-100: #ffe0ef;
+  --brand-200: #ffc2df;
+  --brand-300: #ff9ec9;
+  --brand-400: #fb74ad;
+  --brand-500: #f0509b;
+  --brand-600: #d63384;
+  --brand-700: #b02a6c;
+  --brand-800: #8a2456;
+  --brand-900: #6a1c42;
+
+  /* Accent — mint */
+  --accent-100: #ccf7ef;
+  --accent-400: #4dd6c0;
+  --accent-500: #22c3aa;
+  --accent-600: #12a892;
+
+  --background: #fff5fa;
+  --foreground: #6a1c42;
+  --card: #ffffff;
+  --card-foreground: #6a1c42;
+  --muted: #a67389;
+  --muted-surface: #ffe9f3;
+  --border: #ffd4e6;
+  --ring: #ff9ec9;
+  --on-brand: #ffffff;
+
+  --success: #16a34a;
+  --success-surface: #dcfce7;
+  --warning: #d97706;
+  --warning-surface: #fef3c7;
+  --error: #dc2626;
+  --error-surface: #fee2e2;
+
+  --tile-1: #ff6b9d;
+  --tile-2: #7ec8e3;
+  --tile-3: #9ee37d;
+  --tile-4: #ffd166;
+  --tile-5: #c08cf0;
+  --star: #ffc72c;
+  --locked: #d9b8c8;
+  --energy: #ff5a7a;
+  --diamond: #38d0f0;
+
+  --bg-top: #ff9ec9;
+  --bg-bottom: #ffe0ef;
+
+  --font-body: var(--font-mali), system-ui, sans-serif;
+  --font-heading-family: var(--font-baloo), var(--font-mali), system-ui, sans-serif;
+}
+
+[data-theme="candy"].dark,
+.dark[data-theme="candy"] {
+  --brand-50: #3a1226;
+  --brand-100: #4a1730;
+  --brand-200: #5f1d3f;
+  --brand-300: #7a2551;
+  --brand-500: #fb74ad;
+  --brand-600: #ff9ec9;
+  --brand-700: #ffc2df;
+  --brand-800: #ffe0ef;
+  --brand-900: #fff1f7;
+  --on-brand: #3a1226;
+
+  --background: #24101a;
+  --foreground: #ffe9f3;
+  --card: #2f1622;
+  --card-foreground: #ffe9f3;
+  --muted: #c69bb0;
+  --muted-surface: #2f1622;
+  --border: #4a2536;
+  --ring: #fb74ad;
+
+  --success-surface: #14532d;
+  --warning-surface: #451a03;
+  --error-surface: #450a0a;
+
+  --locked: #5a3648;
+
+  --bg-top: #4a1730;
+  --bg-bottom: #24101a;
+}

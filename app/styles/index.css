@@ -1,0 +1,99 @@
+/* ============================================
+   Easy Kids Universe — CSS entry point
+   ลำดับ @import ห้ามสลับ (tailwind ต้องมาก่อน)
+   ============================================ */
+
+@import "tailwindcss";
+
+/* Tailwind theme mapping (var() only — ไม่มี hardcoded color) */
+@import "./theme.css";
+
+/* Template palettes — universe ผูกกับ :root = default */
+@import "./themes/universe.css";
+@import "./themes/candy.css";
+@import "./themes/galaxy.css";
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading-family);
+  }
+}
+
+@layer components {
+  /* พื้นหลังฉากจักรวาล — gradient จาก token ต่อธีม (fixed กันเลื่อนตอน scroll) */
+  .app-bg {
+    background: linear-gradient(
+      to bottom,
+      var(--bg-top) 0%,
+      var(--bg-bottom) 55%,
+      var(--background) 100%
+    );
+    background-attachment: fixed;
+  }
+
+  /* การ์ด/ปุ่ม chunky มนขอบขาว เงา 3D ตามลุคโลโก้ */
+  .chunky {
+    border-radius: 1.25rem;
+    border: 4px solid var(--card);
+    box-shadow:
+      0 6px 0 rgba(0, 0, 0, 0.12),
+      0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@layer utilities {
+  /* feedback animations สำหรับหน้าเกม */
+  @keyframes eku-shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    20%,
+    60% {
+      transform: translateX(-8px);
+    }
+    40%,
+    80% {
+      transform: translateX(8px);
+    }
+  }
+  @keyframes eku-pop {
+    0% {
+      transform: scale(0.6);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes eku-bounce-in {
+    0% {
+      transform: scale(0.3) translateY(40px);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+  .animate-shake {
+    animation: eku-shake 0.4s ease-in-out;
+  }
+  .animate-pop {
+    animation: eku-pop 0.35s ease-out;
+  }
+  .animate-bounce-in {
+    animation: eku-bounce-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+}

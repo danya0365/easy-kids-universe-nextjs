@@ -16,7 +16,7 @@
 
 ## Working Log
 
-- _(ยังว่าง — เพิ่ม log เมื่อ build เสร็จ increment สำคัญ)_
+- [🌌 EKU v0.1 build แรกเสร็จ](log/2026-07-eku-v0.1.md) — โครงจักรวาล + 3 เกม + economy ร่วม (client-only), gate เขียวครบ, งานค้าง (verify gameplay บน browser, รูปจริง, backend) — อ่านตอน resume
 
 ## Archive (Library)
 

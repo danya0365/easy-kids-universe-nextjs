@@ -1,0 +1,90 @@
+/* ============================================
+   Template: galaxy 🌌 (ปลดด้วยเพชร 120 💎)
+   ท่องอวกาศ น้ำเงินม่วง
+   ============================================ */
+
+[data-theme="galaxy"] {
+  /* Brand — cosmic purple */
+  --brand-50: #f2edff;
+  --brand-100: #e5dbff;
+  --brand-200: #cbb8ff;
+  --brand-300: #ab8ff5;
+  --brand-400: #8a66ea;
+  --brand-500: #7048d6;
+  --brand-600: #5a37b3;
+  --brand-700: #472b8f;
+  --brand-800: #372270;
+  --brand-900: #281a52;
+
+  /* Accent — nebula magenta */
+  --accent-100: #ffe0f5;
+  --accent-400: #ff6fd8;
+  --accent-500: #f04bc4;
+  --accent-600: #d02aa6;
+
+  --background: #f4f0ff;
+  --foreground: #281a52;
+  --card: #ffffff;
+  --card-foreground: #281a52;
+  --muted: #7a6ba0;
+  --muted-surface: #ece5ff;
+  --border: #ddd2ff;
+  --ring: #ab8ff5;
+  --on-brand: #ffffff;
+
+  --success: #16a34a;
+  --success-surface: #dcfce7;
+  --warning: #d97706;
+  --warning-surface: #fef3c7;
+  --error: #dc2626;
+  --error-surface: #fee2e2;
+
+  --tile-1: #ff5a7a;
+  --tile-2: #4d8bff;
+  --tile-3: #43d9ad;
+  --tile-4: #ffb454;
+  --tile-5: #b06bff;
+  --star: #ffd54a;
+  --locked: #c3b8e0;
+  --energy: #ff5a7a;
+  --diamond: #4dd6f0;
+
+  --bg-top: #ab8ff5;
+  --bg-bottom: #e5dbff;
+
+  --font-body: var(--font-mali), system-ui, sans-serif;
+  --font-heading-family: var(--font-baloo), var(--font-mali), system-ui, sans-serif;
+}
+
+[data-theme="galaxy"].dark,
+.dark[data-theme="galaxy"] {
+  /* ลุค galaxy ตัวจริง = โหมดมืด */
+  --brand-50: #1a1440;
+  --brand-100: #221a52;
+  --brand-200: #2e2470;
+  --brand-300: #3d3090;
+  --brand-500: #ab8ff5;
+  --brand-600: #cbb8ff;
+  --brand-700: #e5dbff;
+  --brand-800: #f2edff;
+  --brand-900: #f8f5ff;
+  --on-brand: #1a1440;
+
+  --background: #0d0a26;
+  --foreground: #ece7ff;
+  --card: #16123a;
+  --card-foreground: #ece7ff;
+  --muted: #9b8fc6;
+  --muted-surface: #16123a;
+  --border: #2e2560;
+  --ring: #ab8ff5;
+
+  --success-surface: #14532d;
+  --warning-surface: #451a03;
+  --error-surface: #450a0a;
+
+  --locked: #3a3168;
+
+  --bg-top: #221a52;
+  --bg-bottom: #0d0a26;
+}

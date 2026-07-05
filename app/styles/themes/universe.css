@@ -1,0 +1,96 @@
+/* ============================================
+   Template: universe (DEFAULT — ฟรี)
+   ถอดลุคจากโลโก้: จักรวาลฟ้าใส ดาวทอง การ์ดขาว tile หลากสี
+   ============================================ */
+
+:root,
+[data-theme="universe"] {
+  /* Brand — sky blue */
+  --brand-50: #eef9ff;
+  --brand-100: #d9f1ff;
+  --brand-200: #bfe9ff;
+  --brand-300: #8ed8fb;
+  --brand-400: #5cc6f5;
+  --brand-500: #2aa8e8;
+  --brand-600: #1f8fd0;
+  --brand-700: #1a72a8;
+  --brand-800: #195e88;
+  --brand-900: #17456a;
+
+  /* Accent — sunny gold */
+  --accent-100: #fff3cc;
+  --accent-400: #ffcf4d;
+  --accent-500: #ffc72c;
+  --accent-600: #f0a800;
+
+  /* Surface / semantic */
+  --background: #eaf7ff;
+  --foreground: #17456a;
+  --card: #ffffff;
+  --card-foreground: #17456a;
+  --muted: #6b8ca6;
+  --muted-surface: #eaf3fa;
+  --border: #cfe8f7;
+  --ring: #5cc6f5;
+  --on-brand: #ffffff;
+
+  /* Status */
+  --success: #16a34a;
+  --success-surface: #dcfce7;
+  --warning: #d97706;
+  --warning-surface: #fef3c7;
+  --error: #dc2626;
+  --error-surface: #fee2e2;
+
+  /* Game tokens */
+  --tile-1: #e8384f;
+  --tile-2: #1f6fe0;
+  --tile-3: #7dc832;
+  --tile-4: #f0509b;
+  --tile-5: #8a4fd6;
+  --star: #ffc72c;
+  --locked: #b8c6d0;
+  --energy: #ff5a7a;
+  --diamond: #38d0f0;
+
+  /* Scene gradient (ใช้โดย .app-bg — token-driven ไม่ hardcode ใน className) */
+  --bg-top: #5cc6f5;
+  --bg-bottom: #bfe9ff;
+
+  /* Fonts */
+  --font-body: var(--font-mali), system-ui, sans-serif;
+  --font-heading-family: var(--font-baloo), var(--font-mali), system-ui, sans-serif;
+}
+
+[data-theme="universe"].dark,
+.dark[data-theme="universe"] {
+  /* พลิก ramp: 50-300 = ฟ้าเข้ม, 500-900 = ฟ้าอ่อน/ข้อความ */
+  --brand-50: #0e2a3d;
+  --brand-100: #123449;
+  --brand-200: #17435c;
+  --brand-300: #1d5474;
+  --brand-500: #5cc6f5;
+  --brand-600: #8ed8fb;
+  --brand-700: #bfe9ff;
+  --brand-800: #d9f1ff;
+  --brand-900: #eef9ff;
+  --on-brand: #0e2a3d;
+
+  --background: #0b1a26;
+  --foreground: #eaf7ff;
+  --card: #12293a;
+  --card-foreground: #eaf7ff;
+  --muted: #8fb0c6;
+  --muted-surface: #12293a;
+  --border: #23485f;
+  --ring: #5cc6f5;
+
+  --success-surface: #14532d;
+  --warning-surface: #451a03;
+  --error-surface: #450a0a;
+
+  --locked: #3a5266;
+
+  --bg-top: #0e2a3d;
+  --bg-bottom: #0b1a26;
+}
