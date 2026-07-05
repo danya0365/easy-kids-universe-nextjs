@@ -46,8 +46,15 @@ export const metadata: Metadata = {
     title: "Easy Kids Universe — จักรวาลเกมสนุกของเด็กๆ",
     description:
       "จักรวาลรวมมินิเกมเสริมทักษะสำหรับเด็ก เล่นฟรีบนเว็บ ไม่ต้องดาวน์โหลด",
-    images: ["/easy-kid-universe/logo.png"],
+    images: ["/easy-kid-universe/opengraph.png"],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Easy Kids Universe — จักรวาลเกมสนุกของเด็กๆ",
+    description:
+      "จักรวาลรวมมินิเกมเสริมทักษะสำหรับเด็ก เล่นฟรีบนเว็บ ไม่ต้องดาวน์โหลด",
+    images: ["/easy-kid-universe/opengraph.png"],
   },
 };
 
