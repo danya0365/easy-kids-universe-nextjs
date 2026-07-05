@@ -12,7 +12,34 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "skills/**",
   ]),
+  // Hexagonal gate — domain ต้อง pure (framework-free). ห้าม import next/react/zustand ใน src/domain/**
+  {
+    files: ["src/domain/**/*.ts", "src/domain/**/*.tsx"],
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: [
+                "next",
+                "next/*",
+                "react",
+                "react-dom",
+                "react/*",
+                "zustand",
+                "zustand/*",
+              ],
+              message:
+                "src/domain ต้อง framework-free — ห้าม import next/react/zustand (hexagonal gate)",
+            },
+          ],
+        },
+      ],
+    },
+  },
 ]);
 
 export default eslintConfig;
