@@ -1,6 +1,7 @@
 // Dashboard หน้าแรก — ทักทาย + การ์ด "เล่นต่อ" + สรุปสถิติ + ความคืบหน้าต่อเกม
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import type { GameDef } from "@/src/domain/ports/game.port";
 import { recommendedLevel } from "@/src/domain/services/unlock";
@@ -69,8 +70,20 @@ export function Dashboard({
 
   return (
     <div className="mx-auto w-full max-w-lg px-4">
+      {/* โลโก้ brand */}
+      <div className="flex justify-center pt-1">
+        <Image
+          src="/easy-kid-universe/logo.png"
+          alt="Easy Kids Universe"
+          width={320}
+          height={213}
+          priority
+          className="h-auto w-52 drop-shadow-lg sm:w-60"
+        />
+      </div>
+
       {/* ทักทาย */}
-      <section className="flex items-center gap-3 pt-2">
+      <section className="flex items-center gap-3 pt-1">
         <CharacterAvatar characterId={buddyId} size="lg" />
         <div>
           <p className="font-heading text-xl font-extrabold text-on-brand drop-shadow">

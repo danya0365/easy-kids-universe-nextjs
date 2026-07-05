@@ -57,6 +57,9 @@
   --bg-top: #5cc6f5;
   --bg-bottom: #bfe9ff;
 
+  /* Decorator เมฆ (SceneDecor) */
+  --decor-cloud: rgba(255, 255, 255, 0.92);
+
   /* Fonts */
   --font-body: var(--font-mali), system-ui, sans-serif;
   --font-heading-family: var(--font-baloo), var(--font-mali), system-ui, sans-serif;
@@ -93,4 +96,6 @@
 
   --bg-top: #0e2a3d;
   --bg-bottom: #0b1a26;
+
+  --decor-cloud: rgba(255, 255, 255, 0.07);
 }

@@ -46,6 +46,52 @@
       0 6px 0 rgba(0, 0, 0, 0.12),
       0 10px 20px rgba(0, 0, 0, 0.1);
   }
+
+  /* ── SceneDecor: ก้อนเมฆนุ่ม (ฐานวงรี + puff บน) theme-aware ผ่าน --decor-cloud ── */
+  .decor-cloud {
+    position: relative;
+    background: var(--decor-cloud);
+    border-radius: 999px;
+    filter: blur(1px);
+  }
+  .decor-cloud::before,
+  .decor-cloud::after {
+    content: "";
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+  }
+  .decor-cloud::before {
+    left: 14%;
+    top: -42%;
+    width: 46%;
+    height: 92%;
+  }
+  .decor-cloud::after {
+    right: 12%;
+    top: -30%;
+    width: 40%;
+    height: 80%;
+  }
+
+  /* สายรุ้งครึ่งวง (สีรุ้งอยู่ใน CSS ได้ — decorative) */
+  .rainbow-arc {
+    background: radial-gradient(
+      circle at 50% 100%,
+      transparent 40%,
+      #8a4fd6 40% 45%,
+      #1f6fe0 45% 50%,
+      #7dc832 50% 55%,
+      #ffc72c 55% 60%,
+      #ff8a34 60% 65%,
+      #e8384f 65% 70%,
+      transparent 70%
+    );
+    opacity: 0.32;
+  }
+  :is(.dark) .rainbow-arc {
+    opacity: 0.16;
+  }
 }
 
 @layer utilities {
@@ -95,5 +141,54 @@
   }
   .animate-bounce-in {
     animation: eku-bounce-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* ── SceneDecor animations (คุม duration/delay ต่อ element ด้วย inline style) ── */
+  @keyframes eku-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+  @keyframes eku-drift {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(22px);
+    }
+  }
+  @keyframes eku-twinkle {
+    0%,
+    100% {
+      opacity: 0.25;
+      transform: scale(0.85);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+  }
+  .animate-float {
+    animation: eku-float 6s ease-in-out infinite;
+  }
+  .animate-drift {
+    animation: eku-drift 14s ease-in-out infinite;
+  }
+  .animate-twinkle {
+    animation: eku-twinkle 3s ease-in-out infinite;
+  }
+
+  /* ปิด animation ให้ผู้ที่ตั้ง reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-float,
+    .animate-drift,
+    .animate-twinkle {
+      animation: none;
+    }
   }
 }

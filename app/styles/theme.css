@@ -60,4 +60,5 @@
   --color-locked: var(--locked);
   --color-energy: var(--energy);
   --color-diamond: var(--diamond);
+  --color-decor-cloud: var(--decor-cloud);
 }

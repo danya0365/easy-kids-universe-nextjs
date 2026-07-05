@@ -52,6 +52,8 @@
   --bg-top: #ff9ec9;
   --bg-bottom: #ffe0ef;
 
+  --decor-cloud: rgba(255, 255, 255, 0.92);
+
   --font-body: var(--font-mali), system-ui, sans-serif;
   --font-heading-family: var(--font-baloo), var(--font-mali), system-ui, sans-serif;
 }
@@ -86,4 +88,6 @@
 
   --bg-top: #4a1730;
   --bg-bottom: #24101a;
+
+  --decor-cloud: rgba(255, 255, 255, 0.07);
 }
