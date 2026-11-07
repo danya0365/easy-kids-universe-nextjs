@@ -9,7 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Deploy บน Cloudflare Workers ผ่าน `@opennextjs/cloudflare` (`wrangler.jsonc`, สคริปต์ `cf:build` / `cf:deploy` / `cf:deploy:staging`, worker `easy-kids-universe` และ staging `easy-kids-universe-dev`)
+
 ### Changed
+
+- `next/image` เสิร์ฟแบบ unoptimized (ยังไม่ผูก Cloudflare Images)
+- commit sha อ่าน `WORKERS_CI_COMMIT_SHA` จาก Workers Builds ด้วย
 
 ### Fixed
 

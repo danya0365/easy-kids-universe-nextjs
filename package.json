@@ -6,6 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf:deploy:staging": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --env staging",
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -15,6 +18,7 @@
     "version": "git add CHANGELOG.md"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "1.20.1",
     "next": "16.2.10",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -29,6 +33,7 @@
     "eslint-config-next": "16.2.10",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "vitest": "^4"
+    "vitest": "^4",
+    "wrangler": "^4.158.0"
   }
 }
