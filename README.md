@@ -29,8 +29,14 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on Cloudflare Workers
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This app runs on Cloudflare Workers through [`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare). Local development stays `npm run dev`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run cf:build            # next build + OpenNext worker bundle
+npm run cf:deploy           # build and deploy worker easy-kids-universe
+npm run cf:deploy:staging   # build and deploy worker easy-kids-universe-dev
+```
+
+Deploy needs a Cloudflare API token (`wrangler login` or `CLOUDFLARE_API_TOKEN` plus `CLOUDFLARE_ACCOUNT_ID`). Do not commit secrets. Workers Builds injects `WORKERS_CI_COMMIT_SHA` for the footer.
