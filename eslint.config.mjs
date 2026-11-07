@@ -13,6 +13,8 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
     "skills/**",
+    ".open-next/**",
+    ".wrangler/**",
   ]),
   // Hexagonal gate — domain ต้อง pure (framework-free). ห้าม import next/react/zustand ใน src/domain/**
   {
